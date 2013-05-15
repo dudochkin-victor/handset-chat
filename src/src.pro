@@ -1,11 +1,17 @@
+### eqmake4 was here ###
+CONFIG -= debug_and_release debug
+CONFIG += release
+
 include(../common.pri)
 TEMPLATE = app
-QT += dbus
-CONFIG += debug \
+QT += dbus mobility
+CONFIG +=  \
     meegotouch \
     link_pkgconfig \
     dcpconfig \
+    mobility \
     debug
+MOBILITY += contacts
 PKGCONFIG += libmeegochat meegotouch
 MOC_DIR = .moc
 OBJECTS_DIR = .obj
