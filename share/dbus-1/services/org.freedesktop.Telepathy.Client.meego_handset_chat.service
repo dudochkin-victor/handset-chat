@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.freedesktop.Telepathy.Client.meego_handset_chat
+Exec=/usr/bin/meego-handset-chat
+

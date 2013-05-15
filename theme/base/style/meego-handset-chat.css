@@ -1,0 +1,396 @@
+/*
+ * meego-handset-chat - Meego Handset Chat application
+ *
+ * Copyright (c) 2010, Intel Corporation.
+ *
+ * This program is licensed under the terms and conditions of the
+ * Apache License, version 2.0.  The full text of the Apache License is at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+
+@const COLOR_CONVOMSGTEXT: #595959;
+@const COLOR_INBOXMSGTEXTREAD: #464646;
+@const COLOR_TIMESTAMP: #aeaeae;
+@const COLOR_NEWMSGYELLOW: #ffc844;
+@const COLOR_APPTITLEYELLOW: #ffc844;
+@const COLOR_CONTACTNAME: #464646;
+@const COLOR_LIGHTTEXT: #f2f2f2;
+@const COLOR_DROPDNTEXT: #667786;
+
+@const BGCOLOR: #b2b2b2;
+@const BGCOLOR_ACCOUNTS: #fafafa;
+
+/*
+@const FONT_LARGE: "Droid Sans" 2.4mm;
+@const FONT_MEDIUM: "Droid Sans" 2.1mm;
+@const FONT_SMALL: "Droid Sans" 1.8mm;
+*/
+
+
+MWidgetStyle {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+MAbstractLayoutPolicyStyle {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-spacing: 0;
+    horizontal-spacing: 0;
+}
+
+MApplicationPageStyle {
+    vertical-align: top;
+    horizontal-align: center;
+ 
+    padding-left: 0;
+    padding-right: 0;
+ 
+    background-image: ;
+    background-color: #454545;
+}
+
+MListStyle {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+/*    background-color: #FFFFFF; */
+}
+
+
+
+/***************************
+ * Chat specific properties *
+ ***************************/
+
+
+MApplicationPageStyle {
+    background-image: ;
+    background-color: #454545;
+}
+
+#MComboBoxTitle {
+    font: $FONT_SMALL;
+    color: $COLOR_DROPDNTEXT;
+}
+
+#MComboBoxSubtitle {
+    font: $FONT_LARGE;
+    color: #FFFFFF;
+}
+
+#cboAcctStatus {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#acctListItemName {
+    font: $FONT_LARGE;
+    margin-left: 10;
+}
+
+#acctListItemName.Portrait {
+    preferred-size: 77% -1;
+}
+
+#acctListItemName.Landscape {
+    preferred-size: 87% -1;
+}
+
+AcctListItemStyle {
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
+    background-image: "meegotouch-dialog-header-background";
+    minimum-size: 100% -1;
+    maximum-size: 100% -1;
+}
+
+#imgAcctListItemDropdown {
+    margin-right: 5;
+    margin-left: 10;
+}
+
+
+#acctListItemName {
+    margin-right: -45;
+}
+
+ContactListItemStyle {
+    margin-left: 0;
+/*    background-tiles: "meegotouch-list-background" 10px 10px 10px 10px;*/
+}
+
+ContactListItemStyle:pressed {
+/*    background-tiles: "meegotouch-list-background-pressed" 10px 10px 10px 10px;*/
+}
+
+#contactListItemPic {
+    margin-left: 30;
+    margin-top: 10;
+}
+
+#contactListItemName {
+    font: $FONT_LARGE;
+    margin-left: 5;
+    margin-top: 10;
+}
+
+#contactListItemStatusPic {
+    margin-left: 5;
+    margin-top: 10;
+    preferred-size: 24 24;
+}
+
+#contactListItemStatusMsg {
+    font: $FONT_SMALL;
+    color: $COLOR_DROPDNTEXT;
+    margin-left: 5;
+    margin-bottom: 10;
+}
+
+
+ContactMessageListItemStyle {
+    margin-left: 0;
+/*    background-tiles: "meegotouch-list-background" 10px 10px 10px 10px;*/
+}
+
+ContactMessageListItemStyle:pressed {
+/*    background-tiles: "meegotouch-list-background-pressed" 10px 10px 10px 10px;*/
+}
+
+ContactMessageListItemStyle:unread {
+/*    background-tiles: "meegotouch-list-background" 10px 10px 10px 10px;*/
+}
+
+#contactMessageListItemPic {
+    margin-left: 20;
+    margin-top: 10;
+}
+
+#contactMessageListItemStatusPic {
+    margin-left: 5;
+    margin-top: 10;
+    preferred-size: 24 24;
+}
+
+#contactMessageListItemName {
+    font: $FONT_LARGE;
+    margin-left: 5;
+    margin-top: 10;
+}
+
+#contactMessageListItemLastMsgRead {
+    font: $FONT_LARGE;
+    color: $COLOR_DROPDNTEXT;
+    margin-left: 5;
+}
+
+#contactMessageListItemLastMsgUnread {
+    font: $FONT_LARGE;
+    margin-left: 5;
+}
+
+#contactMessageListItemLastMsgRcvdRead {
+    font: $FONT_SMALL;
+    margin-left: 5;
+    margin-bottom: 10;
+    margin-top: 5;
+    color: $COLOR_TIMESTAMP;
+}
+
+#contactMessageListItemLastMsgRcvdUnread {
+    font: $FONT_SMALL;
+    margin-left: 5;
+    margin-bottom: 10;
+    margin-top: 5;
+    color: $COLOR_NEWMSGYELLOW;
+}
+
+
+/* AcctWizardPage */
+
+#btnAcctWizardNext {
+}
+
+#lblAcctWizardHeader {
+    font: $FONT_LARGE;
+    margin-bottom: 40;
+}
+
+#lblAcctWizardHeader.Portrait {
+    margin-bottom: 60;
+}
+
+/* DialogPage */
+
+#dialogPageHeader {
+    background-image: "meegotouch-navigationbar-toolbar-background" 10px 10px 10px 10px;
+    minimum-size: 100% $HEIGHT_NAVIGATIONBAR;
+    preferred-size: 100% $HEIGHT_NAVIGATIONBAR;
+    maximum-size: 100% $HEIGHT_NAVIGATIONBAR;
+}
+
+#dialogPageContactPic {
+    margin-left: 10;
+    margin-top: 10;
+    margin-bottom: 10;
+}
+
+#dialogPageStatusPic {
+    margin-left: 5;
+    margin-top: 10;
+    margin-bottom: 10;
+    preferred-size: 24 24;
+}
+
+#dialogPageNameLabel {
+    font: $FONT_LARGE;
+    color: $COLOR_LIGHTTEXT;
+    margin-left: 5;
+    margin-top: 10;
+    margin-bottom: 10;
+}
+
+#dialogPageStatusMsgLabel {
+    font: $FONT_SMALL;
+    color: $COLOR_LIGHTTEXT;
+    margin-left: 5;
+}
+
+MessageListItemStyle:pressed {
+/*    background-image: "im-conversationIncoming-background-pressed";*/
+/*    background-tiles: "meegotouch-list-background" 10px 10px 10px 10px;*/
+}
+
+MessageListItemStyle:incoming {
+/*    background-image: "im-conversationIncoming-background";*/
+/*    background-tiles: "meegotouch-list-background" 10px 10px 10px 10px;*/
+}
+
+MessageListItemStyle:outgoing {
+/*    background-image: "im-conversationOutgoing-background";*/
+/*    background-tiles: "meegotouch-list-background" 10px 10px 10px 10px;*/
+}
+
+MessageListItemStyle:pendingsend {
+    /*background-image: "im-conversationOutgoing-background";*/
+/*    background-tiles: "meegotouch-list-background" 10px 10px 10px 10px;*/
+}
+
+#messageListItemMsg {
+    font: $FONT_LARGE;
+    color: $COLOR_CONVOMSGTEXT;
+    margin-left: 10;
+}
+
+#messageListItemRcvd {
+    font: $FONT_SMALL;
+    color: $COLOR_TIMESTAMP;
+    margin-left: 10;
+}
+
+#entryBox {
+}
+
+#textEntry {
+    font: $FONT_LARGE;
+/*    background-image: "meegotouch-textedit-background" 0 0 0 0;*/
+}
+
+#clearButton {
+    font: $FONT_LARGE;
+    text-color: #838383;
+    background-image: "icon-m-framework-close-alt" 0 0 0 0;
+    background-color: #FFFFFF;
+    minimum-size: 40 39;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#textSeparator {
+    minimum-size: 3 3;
+    preferred-size: 3 3;
+    maximum-size: 3 40;
+    background-image: "meegotouch-separator-background-vertical" 0 0 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#sendButton {
+/*    font: $FONT_LARGE;
+    text-color: #838383;
+    background-color: #FFFFFF;
+    minimum-size: 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-image: ;*/
+}
+
+#sendButton:pressed {
+/*    text-color: #FFFFFF;*/
+}
+
+#ApproveContactWidget_Container {
+    /*background-color: $BGCOLOR;*/
+    margin-bottom: 5;
+    background-color: #2020FF;
+}
+
+ApproveContactWidgetStyle {
+    background-color: #2020FF;
+}
+
+ApproveContactWidget {
+    background-color: #2020FF;
+}
+
+#ApproveContactWidget_HeaderLabel {
+    font: $FONT_LARGE;
+}
+
+#ApproveContactWidget_AcctTextLabel {
+    font: $FONT_MEDIUM;
+}
+
+#ApproveContactWidget_AcctNameLabel {
+    font: $FONT_MEDIUM;
+}
+
+#ApproveContactWidget_ContactAvatarImg {
+    margin-left: 5;
+}
+
+#ApproveContactWidget_ContactNameLabel {
+    font: $FONT_MEDIUM;
+    margin-left: 2;
+    margin-bottom: 2;
+}
+
+#ApproveContactWidget_DenyButton {
+    margin-bottom: 2;
+}
+
+#ApproveContactWidget_ApproveButton {
+    margin-bottom: 2;
+}
+

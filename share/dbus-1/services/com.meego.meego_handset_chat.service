@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=com.meego.meego_handset_chat
+Exec=/usr/bin/meego-handset-chat --hidden
+
